@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<meta content="Procesos Judiciales es una aplicación en la nube para abogados, que permite recibir la información básica de casos, alarmas y notificaciones de eventos importantes, así como hacer seguimiento de los casos en los juzgados." name="description" />
+		<meta content="etiqueta1, etiqueta2, etiqueta3" name="keywords" />
+		<%#TODO Agregar contentido de keywors %>
+		<title><%= yield :title %></title>
+		<%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+		<%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+		<%= csrf_meta_tags %>
+	</head>
+	<body>
+		<% flash.each do |name, msg| -%>
+		<%= content_tag :div, msg, class: name %>
+		<% end -%>
+		<%= yield %>
+
+	</body>
+</html>

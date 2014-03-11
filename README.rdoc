@@ -1,0 +1,5 @@
+== README
+
+Landing Page para Procesos Judiciales
+
+Requiere Rails 4 y Ruby 2.1

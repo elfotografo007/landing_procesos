@@ -1,0 +1,22 @@
+<h1>Listing estadisticas</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Hits</th>
+      <th>Último hit</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @estadisticas.each do |estadistica| %>
+      <tr>
+        <td><%= estadistica.hits %></td>
+ 		<td><%= estadistica.updated_at %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
