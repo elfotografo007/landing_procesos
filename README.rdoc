@@ -2,4 +2,6 @@
 
 Landing Page para Procesos Judiciales
 
-Requiere Rails 4 y Ruby 2.1
+Requiere Rails 4, Ruby 2.1 y MongoDB 2.4.9
+
+Se utiliza mongoid 4.0.0.beta1 para que funcione Mongo con Rails 4.
