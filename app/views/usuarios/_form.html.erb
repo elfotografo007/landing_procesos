@@ -1,7 +1,7 @@
-<%= form_for(@usuario) do |f| %>
+<%= form_for(@usuario, html: { role: "form" }) do |f| %>
   <% if @usuario.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@usuario.errors.count, "error") %> prohibited this usuario from being saved:</h2>
+      <h2>No se pudo guardar por los siguientes motivos:</h2>
 
       <ul>
       <% @usuario.errors.full_messages.each do |msg| %>
@@ -11,23 +11,23 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :nombre %><br>
-    <%= f.text_field :nombre %>
+  <div class="form-group">
+    <%= f.label :nombre %>
+    <%= f.text_field :nombre, class: "form-control", placeholder: "Nombre" %>
   </div>
-  <div class="field">
-    <%= f.label :telefono %><br>
-    <%= f.text_field :telefono %>
+  <div class="form-group">
+    <%= f.label :telefono, "Teléfono" %>
+    <%= f.text_field :telefono, class: "form-control", placeholder: "Teléfono" %>
   </div>
-  <div class="field">
-    <%= f.label :ciudad %><br>
-    <%= f.text_field :ciudad %>
+  <div class="form-group">
+    <%= f.label :ciudad %>
+    <%= f.text_field :ciudad, class: "form-control", placeholder: "Ciudad" %>
   </div>
-  <div class="field">
-    <%= f.label :correo %><br>
-    <%= f.text_field :correo %>
+  <div class="form-group">
+  	<%= f.label :correo %>
+    <%= f.text_field :correo, class: "form-control", placeholder: "Correo" %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Registrarse", class: "btn btn-default btn-block" %>
   </div>
 <% end %>

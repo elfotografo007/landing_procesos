@@ -1,4 +1,49 @@
-<% content_for :title, "Landing Procesos 1" %>
-
-<h1>Landing 1</h1>
-<p>Index 1</p>
+<% content_for :head do %>
+<%= stylesheet_link_tag :landing1 %>
+<title>Procesos Judiciales | Bienvenido 1</title>
+<% end %>
+<div class="full-width-image-1">
+	<div class="navbar">
+		<div class="navbar-inner">
+			<div class="container">
+				<%= image_tag "blanco_alfa_256.png" %>
+			</div>
+		</div>
+	</div>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-7 col-lg-7">
+				<br />
+				<center>
+					<iframe width="560" height="315" src="////www.youtube.com/embed/54pgZ-AMxE4?rel=0" frameborder="0" allowfullscreen></iframe>
+				</center>
+			</div>
+			<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+				<h3>¿Quieres saber más?</h3>
+				<%= render "usuarios/form" %>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="container">
+	<div class="row">
+		<div class="col-lg-4">
+			<h2>Beneficio 1</h2>
+			<p>
+				Hola
+			</p>
+		</div>
+		<div class="col-lg-4">
+			<h2>Beneficio 2</h2>
+			<p>
+				Hola
+			</p>
+		</div>
+		<div class="col-lg-4">
+			<h2>Beneficio 3</h2>
+			<p>
+				Hola
+			</p>
+		</div>
+	</div>
+</div>

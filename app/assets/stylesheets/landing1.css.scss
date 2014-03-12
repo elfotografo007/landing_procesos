@@ -1,0 +1,16 @@
+body { /* 50px is the height of the navbar - change this if the navbarn height changes */
+  
+}
+.full-width-image-1 {
+  background: image-url("oficina_desenfocada.jpg") no-repeat center center;
+  background-size: cover;
+  padding: 10px 0;
+  height: 600px;
+  color: #fff;
+}
+.pull-left {
+  float: left !important;
+}
+.pull-right {
+  float: right !important;
+}
