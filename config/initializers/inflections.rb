@@ -14,3 +14,9 @@
 # ActiveSupport::Inflector.inflections(:en) do |inflect|
 #   inflect.acronym 'RESTful'
 # end
+ActiveSupport::Inflector.inflections do |inflect|
+  inflect.irregular('administrador', 'administradores')
+  inflect.irregular('informe', 'informes')
+  inflect.irregular('el', 'los')
+  inflect.irregular('siguiente', 'siguientes')
+end
