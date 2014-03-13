@@ -1,7 +1,7 @@
 <%= form_for(@usuario, html: { role: "form" }) do |f| %>
   <% if @usuario.errors.any? %>
     <div id="error_explanation">
-      <h2>No se pudo guardar por los siguientes motivos:</h2>
+      <h4>No se pudo guardar por los siguientes motivos:</h4>
 
       <ul>
       <% @usuario.errors.full_messages.each do |msg| %>
