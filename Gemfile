@@ -33,6 +33,10 @@ end
 # Use mongo, toca desde github para utilizar rails 4
 gem 'mongoid', git: 'git://github.com/mongoid/mongoid.git'
 
+# Para utilizar devise
+gem 'bcrypt'
+gem 'devise'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
 

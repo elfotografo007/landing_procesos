@@ -1,14 +1,12 @@
-<h1>Listing usuarios</h1>
+<h1>Listado de Usuarios</h1>
 
 <table>
   <thead>
     <tr>
       <th>Nombre</th>
-      <th>Telefono</th>
+      <th>Teléfono</th>
       <th>Ciudad</th>
       <th>Correo</th>
-      <th></th>
-      <th></th>
       <th></th>
     </tr>
   </thead>
@@ -20,14 +18,16 @@
         <td><%= usuario.telefono %></td>
         <td><%= usuario.ciudad %></td>
         <td><%= usuario.correo %></td>
-        <td><%= link_to 'Show', usuario %></td>
-        <td><%= link_to 'Edit', edit_usuario_path(usuario) %></td>
-        <td><%= link_to 'Destroy', usuario, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+        <td><%= link_to 'Ver', usuario %></td>
+       </tr>
     <% end %>
   </tbody>
 </table>
 
 <br>
 
-<%= link_to 'New Usuario', new_usuario_path %>
+<%= link_to 'Nuevo', new_usuario_path %> |
+<br />
+<%= link_to "Estadísticas", estadisticas_index_path %>
+<br />
+<%= link_to "Cerrar Sesión", destroy_administrador_session_path, method: :delete %>
