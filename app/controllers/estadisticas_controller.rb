@@ -4,6 +4,7 @@ class EstadisticasController < ApplicationController
   # GET /estadisticas.json
   def index
     @estadisticas = Estadistica.all
+    @referers = Usuario.collection.aggregate "$group" => { _id: "$referer", count: { "$sum" => 1}}
   end
 
 end

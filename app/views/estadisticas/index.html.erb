@@ -1,22 +1,45 @@
-<h1>Listing estadisticas</h1>
+<div class="container">
+	<div class="row">
+		<h1>Estadísticas</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Hits</th>
-      <th>Último hit</th>
-    </tr>
-  </thead>
+		<table class="table table-condensed table-hover">
+			<thead>
+				<tr>
+					<th>URL</th>
+					<th>Hits</th>
+					<th>Último hit</th>
+				</tr>
+			</thead>
 
-  <tbody>
-    <% @estadisticas.each do |estadistica| %>
-      <tr>
-        <td><%= estadistica.hits %></td>
- 		<td><%= estadistica.updated_at %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+			<tbody>
+				<% @estadisticas.each do |estadistica| %>
+				<tr>
+					<td><%= estadistica._id %></td>
+					<td><%= estadistica.hits %></td>
+					<td><%= estadistica.updated_at %></td>
+				</tr>
+				<% end %>
+			</tbody>
+		</table>
+	</div>
+	<div class="row">
+		<h2>Referers</h2>
+		<table class="table table-condensed table-hover">
+			<thead>
+				<tr>
+					<th>Referer</th>
+					<th>Hits</th>
+				</tr>
+			</thead>
 
-<br>
-
+			<tbody>
+				<% @referers.each do |ref| %>
+				<tr>
+					<th><%= ref["_id"] %></th>
+					<th><%= ref["count"] %></th>
+				</tr>
+				<%end%>
+			</tbody>
+		</table>
+	</div>
+</div>
