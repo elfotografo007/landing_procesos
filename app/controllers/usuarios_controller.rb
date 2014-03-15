@@ -14,6 +14,7 @@ class UsuariosController < ApplicationController
 
   # GET /usuarios/new
   def new
+    @referer = params[:referer] || :ninguno
     @usuario = Usuario.new
   end
 
@@ -25,9 +26,10 @@ class UsuariosController < ApplicationController
 
     respond_to do |format|
       if @usuario.save
-        format.html { redirect_to @usuario, notice: 'Tus datos se registraron correctamente. Gracias.' }
+        format.html { redirect_to root_path, notice: 'Tus datos se registraron correctamente. Gracias.' }
         format.json { render action: 'show', status: :created, location: @usuario }
       else
+        @referer = @usuario.referer
         format.html { render action: 'new' }
         format.json { render json: @usuario.errors, status: :unprocessable_entity }
       end
@@ -42,6 +44,6 @@ class UsuariosController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def usuario_params
-      params.require(:usuario).permit(:nombre, :telefono, :ciudad, :correo)
+      params.require(:usuario).permit(:nombre, :telefono, :ciudad, :correo, :referer)
     end
 end
