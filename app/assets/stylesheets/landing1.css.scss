@@ -14,3 +14,10 @@ body { /* 50px is the height of the navbar - change this if the navbarn height c
 .pull-right {
   float: right !important;
 }
+
+.beneficio {
+  text-align: justify;
+}
+.beneficio > h2 {
+  text-align: center;
+}
