@@ -1,6 +1,6 @@
 <%= form_for(@usuario, html: { role: "form" }) do |f| %>
   <% if @usuario.errors.any? %>
-    <div id="error_explanation">
+    <div id="error_explanation" class="alert alert-danger">
       <h4>No se pudo guardar por <%= 'el'.pluralize(@usuario.errors.count) %> <%= 'siguiente'.pluralize(@usuario.errors.count) %> <%= 'motivo'.pluralize(@usuario.errors.count) %>:</h4>
 
       <ul>
