@@ -5,6 +5,7 @@ class EstadisticasController < ApplicationController
   def index
     @estadisticas = Estadistica.all
     @referers = Usuario.collection.aggregate "$group" => { _id: "$referer", count: { "$sum" => 1}}
+    @landings = Usuario.collection.aggregate "$group" => { _id: "$landing", count: { "$sum" => 1}}
   end
 
 end

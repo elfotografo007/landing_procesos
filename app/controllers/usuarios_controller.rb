@@ -15,6 +15,7 @@ class UsuariosController < ApplicationController
   # GET /usuarios/new
   def new
     @referer = params[:referer] || :ninguno
+    @landing = :landing2
     @usuario = Usuario.new
   end
 
@@ -30,6 +31,7 @@ class UsuariosController < ApplicationController
         format.json { render action: 'show', status: :created, location: @usuario }
       else
         @referer = @usuario.referer
+        @landing = @usuario.landing
         format.html { render action: 'new' }
         format.json { render json: @usuario.errors, status: :unprocessable_entity }
       end
@@ -44,6 +46,6 @@ class UsuariosController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def usuario_params
-      params.require(:usuario).permit(:nombre, :telefono, :ciudad, :correo, :referer)
+      params.require(:usuario).permit(:nombre, :telefono, :ciudad, :correo, :referer, :landing)
     end
 end

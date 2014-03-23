@@ -6,7 +6,7 @@ class Usuario
   field :ciudad, type: String
   field :correo, type: String
   field :referer, type: String
-  
+  field :landing, type: String
   validates_presence_of :nombre, :correo, message: "es obligatorio"
   
 end

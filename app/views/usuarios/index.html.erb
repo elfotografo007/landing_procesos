@@ -1,6 +1,6 @@
 <h1>Listado de Usuarios</h1>
 
-<table>
+<table class="table table-condensed table-hover">
   <thead>
     <tr>
       <th>Nombre</th>
@@ -8,6 +8,7 @@
       <th>Ciudad</th>
       <th>Correo</th>
       <th>Referer</th>
+      <th>Landing</th>
       <th></th>
     </tr>
   </thead>
@@ -20,6 +21,7 @@
         <td><%= usuario.ciudad %></td>
         <td><%= usuario.correo %></td>
         <td><%= usuario.referer %></td>
+        <td><%= usuario.landing %></td>
         <td><%= link_to 'Ver', usuario %></td>
        </tr>
     <% end %>

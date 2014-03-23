@@ -23,23 +23,45 @@
 		</table>
 	</div>
 	<div class="row">
-		<h2>Referers</h2>
-		<table class="table table-condensed table-hover">
-			<thead>
-				<tr>
-					<th>Referer</th>
-					<th>Hits</th>
-				</tr>
-			</thead>
+		<div class="col-lg-4">
+			<h2>Referers</h2>
+			<table class="table table-condensed table-hover">
+				<thead>
+					<tr>
+						<th>Referer</th>
+						<th>Hits</th>
+					</tr>
+				</thead>
 
-			<tbody>
-				<% @referers.each do |ref| %>
-				<tr>
-					<th><%= ref["_id"] %></th>
-					<th><%= ref["count"] %></th>
-				</tr>
-				<%end%>
-			</tbody>
-		</table>
+				<tbody>
+					<% @referers.each do |ref| %>
+					<tr>
+						<th><%= ref["_id"] %></th>
+						<th><%= ref["count"] %></th>
+					</tr>
+					<%end%>
+				</tbody>
+			</table>
+		</div>
+		<div class="col-lg-4">
+			<h2>Conversiones por landing</h2>
+			<table class="table table-condensed table-hover">
+				<thead>
+					<tr>
+						<th>Landing</th>
+						<th>Suscritos</th>
+					</tr>
+				</thead>
+
+				<tbody>
+					<% @landings.each do |ref| %>
+					<tr>
+						<th><%= ref["_id"] %></th>
+						<th><%= ref["count"] %></th>
+					</tr>
+					<%end%>
+				</tbody>
+			</table>
+		</div>
 	</div>
 </div>
