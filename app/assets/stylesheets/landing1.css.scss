@@ -18,3 +18,14 @@
 .beneficio > h2 {
   text-align: center;
 }
+
+.tablediv {
+  display: table;
+  width: 100%;
+  margin-top: 20px;
+}
+.tabledivcell {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+}
